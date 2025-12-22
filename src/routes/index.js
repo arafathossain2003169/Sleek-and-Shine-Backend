@@ -14,6 +14,7 @@ const uploadRoutes = require('./uploadRoutes');
 const adminDashboardRoutes = require('./adminDashboardRoutes');
 const shopRoutes = require('./shopRoutes');
 
+router.use('/', require('./homeRoutes'));
 router.use('/auth', authRoutes);
 router.use('/products', productRoutes);
 router.use('/categories', categoryRoutes);
