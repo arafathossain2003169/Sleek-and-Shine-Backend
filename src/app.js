@@ -14,8 +14,8 @@ app.use(helmet());
 
 // CORS configuration
 const allowedOrigins = [
-  process.env.FRONTEND_LOCAL, // local dev
-  process.env.FRONTEND_URL // Vercel prod
+  "http://localhost:3000", // local dev
+  "https://sleek-and-shine-frontend.vercel.app" // Vercel prod
 ];
 
 app.use(cors({
