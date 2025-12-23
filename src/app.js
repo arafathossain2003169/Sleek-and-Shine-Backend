@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -13,8 +14,8 @@ app.use(helmet());
 
 // CORS configuration
 const allowedOrigins = [
-  "http://localhost:3000", // local dev
-  "https://sleek-and-shine-frontend.vercel.app" // Vercel prod
+  process.env.FRONTEND_LOCAL, // local dev
+  process.env.FRONTEND_URL // Vercel prod
 ];
 
 app.use(cors({
